@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php if (!empty($errorMessage)) { ?>
+        <p><?php echo $errorMessage; ?></p>
+    <?php } elseif (!empty($successMessage)) { ?>
+        <p><?php echo $successMessage; ?></p>
+    <?php } else { ?>
     <h1>Registro de Usuarios</h1>
     <form method="POST" action="registro.php">
         <label for="nombre">Nombre:</label>
@@ -30,5 +35,6 @@
 
         <input type="submit" value="Enviar">
     </form>
+    <?php } ?>
 </body>
 </html>

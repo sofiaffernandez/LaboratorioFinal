@@ -2,16 +2,17 @@
 // Datos de conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = '';
 $dbname = "usuarios";
 
 // Obtener los datos del formulario
-$nombre = $_POST['nombre'];
-$apellido1 = $_POST['apellido1'];
-$apellido2 = $_POST['apellido2'];
-$email = $_POST['email'];
-$login = $_POST['login'];
-$password = $_POST['password'];
+$nombre = $_POST['nombre'] ?? '';
+$apellido1 = $_POST['apellido1'] ?? '';
+$apellido2 = $_POST['apellido2'] ?? '';
+$email = $_POST['email'] ?? '';
+$login = $_POST['login'] ?? '';
+$password = $_POST['password'] ?? '';
+
 
 // Validar los datos
 if (empty($nombre) || empty($apellido1) || empty($apellido2) || empty($email) || empty($login) || empty($password)) {
